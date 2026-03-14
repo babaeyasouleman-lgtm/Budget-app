@@ -810,7 +810,8 @@
               {activeTab === 'settings' && <SettingsView />}
             </main>
 
-            <div className="absolute bottom-0 left-0 right-0 z-50 px-6 pointer-events-none" style={safeAreaStyle}>
+            {/* FIXED bottom navigation bar - stays visible on all screens */}
+            <div className="fixed bottom-0 left-0 right-0 z-50 px-6 pointer-events-none" style={safeAreaStyle}>
               <div className="bg-white/90 backdrop-blur-xl border border-white/40 shadow-[0_8px_30px_rgba(0,0,0,0.08)] rounded-[2rem] px-6 py-4 flex justify-between items-center mb-4 pointer-events-auto">
                 <button onClick={() => setActiveTab('dashboard')} className={`transition-all duration-300 ${activeTab === 'dashboard' ? 'text-slate-900 scale-110' : 'text-slate-400 hover:text-slate-600'}`}>
                   <Icon name="LayoutGrid" className="w-6 h-6" strokeWidth={activeTab === 'dashboard' ? 2.5 : 2} />
